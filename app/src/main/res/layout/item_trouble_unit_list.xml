@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_order"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="序号"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#eaf1fe" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:text="采矿/公用辅助设施/供配电系统"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#eaf1fe" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:text="4"
+        android:textSize="12sp" />
+</LinearLayout>

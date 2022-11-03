@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyDatePickerView">
+        <attr name="wheelTextColor" format="color"/>
+        <attr name="wheelTextSize" format="dimension"/>
+        <attr name="wheelShowCount" format="integer"/>
+        <attr name="wheelTotalOffsetX" format="dimension"/>
+        <attr name="wheelItemVerticalSpace" format="dimension"/>
+        <attr name="wheelRotationX" format="float"/>
+        <attr name="wheelVelocityUnits" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="WheelMaskView">
+        <attr name="wheelMaskLineColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="pickerview">
+        <attr name="pickerview_gravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr>
+        <attr name="pickerview_textSize" format="dimension"/>
+        <attr name="pickerview_textColorOut" format="color"/>
+        <attr name="pickerview_textColorCenter" format="color"/>
+        <attr name="pickerview_dividerColor" format="color"/>
+        <attr name="pickerview_centerBackground" format="color"/>
+        <attr name="pickerview_lineSpacingMultiplier" format="float"/>
+        <attr name="pickerview_isLoop" format="boolean"/>
+        <attr name="pickerview_initPosition" format="integer"/>
+        <attr name="pickerview_visibleItemCount" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="WarpLinearLayout">
+        <attr name="grivate" format="enum"><!--对齐方式 !-->
+            <enum name="right" value="0" />
+            <enum name="left" value="1" />
+            <enum name="center" value="2" />
+        </attr>
+        <attr name="horizontal_Space" format="dimension" />
+        <attr name="vertical_Space" format="dimension" />
+        <attr name="isFull" format="boolean" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="maincolor">#508bfd</color>
+    <color name="secondcolor">#b5cdfd</color>
+    <color name="mainbg">#f7f7f7</color>
+    <color name="mainbg2">#EDEDED</color>
+    <color name="bg">#eaf1fe</color>
+    <color name="line">#E3E3E3</color>
+    <color name="green">#65D996</color>
+    <color name="maintextcolor">#333333</color>
+    <color name="secondtextcolor">#999999</color>
+    <color name="gray2">#666666</color>
+    <color name="gray">#727272</color>
+    <color name="red">#fe685d</color>
+    <color name="pink">#FB5151</color>
+    <color name="orange">#fc9774</color>
+    <color name="blue">#3d7dfc</color>
+    <color name="lightred">#fb671f</color>
+
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+</resources>

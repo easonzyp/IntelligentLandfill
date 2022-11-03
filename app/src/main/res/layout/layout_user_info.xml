@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="180dp"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:drawableTop="@drawable/ic_default_avator"
+        android:drawablePadding="10sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/maintextcolor"
+        tools:text="张三" />
+
+    <TextView
+        android:id="@+id/tv_user_info_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_user_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/bg_logout_btn"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="5dp"
+        android:text="个人信息"
+        android:textColor="@color/maincolor"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_job_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_user_info_label"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:drawableStart="@drawable/ic_user_job"
+        android:drawablePadding="8dp"
+        android:textColor="@color/maintextcolor"
+        android:textSize="12sp"
+        tools:text="职位名称：保管组长" />
+
+    <TextView
+        android:id="@+id/tv_role_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_job_name"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/ic_user_role"
+        android:drawablePadding="8dp"
+        android:textColor="@color/maintextcolor"
+        android:textSize="12sp"
+        tools:text="角色名称：保管组长" />
+
+    <TextView
+        android:id="@+id/tv_dep_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_role_name"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/ic_user_dep"
+        android:drawablePadding="8dp"
+        android:textColor="@color/maintextcolor"
+        android:textSize="12sp"
+        tools:text="部门名称：保管组长" />
+
+    <TextView
+        android:id="@+id/tv_org_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:textColor="@color/secondtextcolor"
+        android:textSize="10sp"
+        tools:text="中央储备粮鸡西直属库有限公司" />
+
+    <TextView
+        android:id="@+id/tv_log_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/bg_logout_btn"
+        android:paddingStart="30dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="8dp"
+        android:text="退出登录"
+        android:textColor="@color/maincolor"
+        android:textSize="14sp" />
+</RelativeLayout>

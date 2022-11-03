@@ -1,0 +1,86 @@
+1.要做一个尽可能流畅的ListView，你平时在工作中如何进行优化的？
+	①Item布局，层级越少越好，使用hierarchyview工具查看优化。
+	②复用convertView
+	③使用ViewHolder
+	④item中有图片时，异步加载
+	⑤快速滑动时，不加载图片
+	⑥item中有图片时，应对图片进行适当压缩
+	⑦实现数据的分页加载	
+	
+2.如何缩减APK包大小？
+	代码
+	保持良好的编程习惯，不要重复或者不用的代码，谨慎添加libs，移除使用不到的libs。
+	使用proguard混淆代码，它会对不用的代码做优化，并且混淆后也能够减少安装包的大小。
+	native code的部分，大多数情况下只需要支持armabi与x86的架构即可。如果非必须，可以考虑拿掉x86的部分。
+
+	资源
+	使用Lint工具查找没有使用到的资源。去除不使用的图片，String，XML等等。 assets目录下的资源请确保没有用不上的文件。
+	生成APK的时候，aapt工具本身会对png做优化，但是在此之前还可以使用其他工具如tinypng对图片进行进一步的压缩预处理。
+	jpeg还是png，根据需要做选择，在某些时候jpeg可以减少图片的体积。 对于9.png的图片，可拉伸区域尽量切小，另外可以通过使用9.png拉伸达到大图效果的时候尽量不要使用整张大图。
+
+	策略
+	有选择性的提供hdpi，xhdpi，xxhdpi的图片资源。建议优先提供xhdpi的图片，对于mdpi，ldpi与xxxhdpi根据需要提供有差异的部分即可。
+	尽可能的重用已有的图片资源。例如对称的图片，只需要提供一张，另外一张图片可以通过代码旋转的方式实现。
+能用代码绘制实现的功能，尽量不要使用大量的图片。例如减少使用多张图片组成animate-list的AnimationDrawable，这种方式提供了多张图片很占空间。
+
+3.Android启动Service的两种方式是什么? 它们的适用情况是什么?
+	如果后台服务开始后基本可以独立运行的话，可以用startService。音乐播放器就可以这样用。它们会一直运行直到你调用 stopSelf或者stopService。
+	你可以通过发送Intent或者接收Intent来与正在运行的后台服务通信，但大部分时间，你只是启动服务并让它独立运行。如果你需要与后台服务通过一个持续的连接来比
+	较频繁地通信，建议使用bind()。比如你需要定位服务不停地把更新后的地理位置传给UI。Binder比Intent开发起来复杂一些，但如果真的需要，你也只能使用它。
+
+	startService：生命周期与调用者不同。启动后若调用者未调用stopService而直接退出，Service仍会运行
+	bindService：生命周期与调用者绑定，调用者一旦退出，Service就会调用unBind->onDestroy
+
+4.请介绍下AsyncTask的内部实现，适用的场景是？
+	AsyncTask内部也是Handler机制来完成的，只不过Android提供了执行框架来提供线程池来执行相应地任务，因为线程池的大小问题，所以AsyncTask只应该用来执行耗时时间较短的任务，
+	比如HTTP请求，大规模的下载和数据库的更改不适用于AsyncTask，因为会导致线程池堵塞，没有线程来执行其他的任务，导致的情形是会发生AsyncTask根本执行不了的问题。
+
+5.介绍下实现一个自定义view的基本流程
+	1、自定义View的属性 编写attr.xml文件
+	2、在layout布局文件中引用，同时引用命名空间
+	3、在View的构造方法中获得我们自定义的属性 ，在自定义控件中进行读取（构造方法拿到attr.xml文件值）
+	4、重写onMesure
+	5、重写onDraw
+
+5.Android中touch事件的传递机制是怎样的?
+	1.Touch事件传递的相关API有dispatchTouchEvent、onTouchEvent、onInterceptTouchEvent
+	2.Touch事件相关的类有View、ViewGroup、Activity
+	3.Touch事件会被封装成MotionEvent对象，该对象封装了手势按下、移动、松开等动作
+	4.Touch事件通常从Activity#dispatchTouchEvent发出，只要没有被消费，会一直往下传递，到最底层的View。
+	5.如果Touch事件传递到的每个View都不消费事件，那么Touch事件会反向向上传递,最终交由Activity#onTouchEvent处理.
+	6.onInterceptTouchEvent为ViewGroup特有，可以拦截事件.
+	7.Down事件到来时，如果一个View没有消费该事件，那么后续的MOVE/UP事件都不会再给它
+	
+6.ANR是什么？怎样避免和解决ANR?
+	ANR：Application Not Responding，即应用无响应
+	ANR一般有三种类型：
+
+	1：KeyDispatchTimeout(5 seconds) –主要类型
+	按键或触摸事件在特定时间内无响应
+
+	2：BroadcastTimeout(10 seconds)
+	BroadcastReceiver在特定时间内无法处理完成
+
+	3：ServiceTimeout(20 seconds) –小概率类型
+	Service在特定的时间内无法处理完成
+	
+7、Android内存泄露研究
+	Android内存泄漏指的是进程中某些对象（垃圾对象）已经没有使用价值了，但是它们却可以直接或间接地引用到gc roots导致无法被GC回收。
+	无用的对象占据着内存空间，使得实际可使用内存变小，形象地说法就是内存泄漏了。
+
+	场景
+	类的静态变量持有大数据对象
+	静态变量长期维持到大数据对象的引用，阻止垃圾回收。
+	非静态内部类的静态实例
+	非静态内部类会维持一个到外部类实例的引用，如果非静态内部类的实例是静态的，就会间接长期维持着外部类的引用，阻止被回收掉。
+	资源对象未关闭
+	资源性对象如Cursor、File、Socket，应该在使用后及时关闭。未在finally中关闭，会导致异常情况下资源对象未被释放的隐患。
+	注册对象未反注册
+	未反注册会导致观察者列表里维持着对象的引用，阻止垃圾回收。
+	Handler临时性内存泄露
+	Handler通过发送Message与主线程交互，Message发出之后是存储在MessageQueue中的，有些Message也不是马上就被处理的。
+	在Message中存在一个 target，是Handler的一个引用，如果Message在Queue中存在的时间越长，就会导致Handler无法被回收。如果Handler是非静态的，则会导致Activity或者Service不会被回收。
+	由于AsyncTask内部也是Handler机制，同样存在内存泄漏的风险。
+	此种内存泄露，一般是临时性的。
+	
+8、okHttp retrofit rxjava

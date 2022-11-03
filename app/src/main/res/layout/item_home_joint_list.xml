@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="15dp">
+
+    <TextView
+        android:id="@+id/tv_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9:00"
+        android:textColor="@color/maintextcolor"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_start_time"
+        android:layout_marginTop="5dp"
+        android:text="11:00"
+        android:textColor="@color/maintextcolor"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_joint_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/tv_end_time"
+        android:text="联单1234561  出库暂存区到焚烧区"
+        android:textColor="@color/maintextcolor"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="已完成"
+        android:textColor="@color/maincolor"
+        android:textSize="12sp" />
+</RelativeLayout>

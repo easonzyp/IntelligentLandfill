@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="#13b2e7"
+        android:textSize="14sp"
+        tools:text="完成数量 10/15" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_state"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/maintextcolor"
+        android:textSize="14sp"
+        tools:text="风险点名称" />
+
+    <TextView
+        android:id="@+id/tv_risk_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="18dp"
+        android:layout_toStartOf="@+id/iv_scan"
+        android:text="风险点编号：1/1/1-1"
+        android:textColor="@color/maintextcolor"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/iv_complate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_complate"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_risk_id"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:src="@drawable/ic_scan_blue"
+        android:textColor="#03B9F5"
+        android:textSize="14sp"
+        android:visibility="visible" />
+</RelativeLayout>
