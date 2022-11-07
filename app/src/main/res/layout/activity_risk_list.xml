@@ -1,12 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.scwang.smart.refresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/srl_refresh"
+    android:id="@+id/ll_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#eaf1fe"
+    android:background="@color/white"
     android:orientation="vertical">
 
+    <com.necer.calendar.WeekCalendar
+        android:id="@+id/weekCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:defaultCheckedLunarTextColor="@color/white"
+        app:defaultCheckedSolarTextColor="@color/white"
+        app:defaultUnCheckedLunarTextColor="@color/gray"
+        app:defaultUnCheckedSolarTextColor="@color/black"
+        app:lunarTextSize="10dp"
+        app:pointLocation="down"
+        app:showHoliday="false"
+        app:solarTextSize="18dp"
+        app:todayUnCheckedLunarTextColor="@color/red"
+        app:todayUnCheckedSolarTextColor="@color/red" />
 
-</com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_joint_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</LinearLayout>

@@ -46,7 +46,7 @@
         android:background="@color/white"
         android:orientation="horizontal">
 
-        <com.wise.develop.IntelligentLandfill.wight.wheelview.WheelView
+        <com.wise.develop.Landfill.wight.wheelview.WheelView
             android:id="@+id/wv_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -13,7 +13,7 @@
         android:paddingTop="10dp">
 
 
-        <com.wise.develop.IntelligentLandfill.wight.wheel.MyDatePickerView
+        <com.wise.develop.Landfill.wight.wheel.MyDatePickerView
             android:id="@+id/datePicker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
