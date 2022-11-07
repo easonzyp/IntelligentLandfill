@@ -1,0 +1,218 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Copyright (C) 2008 ZXing authors
+4
+5 Licensed under the Apache License, Version 2.0 (the "License");
+6 you may not use this file except in compliance with the License.
+7 You may obtain a copy of the License at
+8
+9      http://www.apache.org/licenses/LICENSE-2.0
+10
+11 Unless required by applicable law or agreed to in writing, software
+12 distributed under the License is distributed on an "AS IS" BASIS,
+13 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14 See the License for the specific language governing permissions and
+15 limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.google.zxing.client.android"
+19    android:versionCode="1"
+20    android:versionName="1.0" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="19"
+23-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml
+24        android:targetSdkVersion="30" />
+24-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml
+25
+26    <uses-permission android:name="android.permission.CAMERA" />
+26-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:19:5-65
+26-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:19:22-62
+27    <uses-permission android:name="android.permission.INTERNET" />
+27-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:20:5-67
+27-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:20:22-64
+28    <uses-permission android:name="android.permission.VIBRATE" />
+28-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:21:5-66
+28-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:21:22-63
+29    <uses-permission android:name="android.permission.FLASHLIGHT" />
+29-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:22:5-69
+29-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:22:22-66
+30    <uses-permission android:name="android.permission.READ_CONTACTS" />
+30-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:23:5-72
+30-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:23:22-69
+31    <!-- unavailable in API 23 -->
+32    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+32-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:25:5-93
+32-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:25:22-90
+33    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+33-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:26:5-81
+33-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:26:22-78
+34    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+34-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:27:5-76
+34-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:27:22-73
+35    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+35-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:28:5-76
+35-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:28:22-73
+36
+37    <uses-feature android:name="android.hardware.camera.any" />
+37-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:31:5-64
+37-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:31:19-61
+38    <uses-feature
+38-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:32:5-34:36
+39        android:name="android.hardware.camera.autofocus"
+39-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:33:9-57
+40        android:required="false" />
+40-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:34:9-33
+41    <uses-feature
+41-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:35:5-37:36
+42        android:name="android.hardware.camera.flash"
+42-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:36:9-53
+43        android:required="false" />
+43-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:37:9-33
+44    <uses-feature android:name="android.hardware.screen.landscape" />
+44-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:38:5-70
+44-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:38:19-67
+45    <uses-feature
+45-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:39:5-41:36
+46        android:name="android.hardware.wifi"
+46-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:40:9-45
+47        android:required="false" />
+47-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:41:9-33
+48
+49    <application>
+49-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:43:5-106:19
+50        <activity android:name="com.google.zxing.client.android.CaptureActivity" />
+50-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:44:9-53
+50-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:44:19-50
+51        <activity
+51-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:46:9-49:45
+52            android:name="com.google.zxing.client.android.PreferencesActivity"
+52-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:47:13-48
+53            android:label="@string/preferences_name"
+53-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:48:13-53
+54            android:stateNotNeeded="true" />
+54-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:49:13-42
+55        <activity
+55-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:50:9-69:20
+56            android:name="com.google.zxing.client.android.encode.EncodeActivity"
+56-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:51:13-50
+57            android:stateNotNeeded="true" >
+57-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:52:13-42
+58            <intent-filter>
+58-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:53:13-56:29
+59                <action android:name="com.google.zxing.client.android.ENCODE" />
+59-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:54:17-81
+59-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:54:25-78
+60
+61                <category android:name="android.intent.category.DEFAULT" />
+61-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:55:17-76
+61-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:55:27-73
+62            </intent-filter>
+63            <!-- This allows us to handle the Share button in Contacts. -->
+64            <intent-filter>
+64-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:58:13-62:29
+65                <action android:name="android.intent.action.SEND" />
+65-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:59:17-69
+65-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:59:25-66
+66
+67                <category android:name="android.intent.category.DEFAULT" />
+67-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:55:17-76
+67-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:55:27-73
+68
+69                <data android:mimeType="text/x-vcard" />
+69-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:61:17-57
+69-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:61:23-54
+70            </intent-filter>
+71            <!-- This allows us to handle sharing any plain text . -->
+72            <intent-filter>
+72-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:64:13-68:29
+73                <action android:name="android.intent.action.SEND" />
+73-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:59:17-69
+73-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:59:25-66
+74
+75                <category android:name="android.intent.category.DEFAULT" />
+75-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:55:17-76
+75-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:55:27-73
+76
+77                <data android:mimeType="text/plain" />
+77-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:61:17-57
+77-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:61:23-54
+78            </intent-filter>
+79        </activity>
+80        <activity
+80-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:70:9-79:20
+81            android:name="com.google.zxing.client.android.book.SearchBookContentsActivity"
+81-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:71:13-60
+82            android:label="@string/sbc_name"
+82-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:72:13-45
+83            android:screenOrientation="sensorLandscape"
+83-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:73:13-56
+84            android:stateNotNeeded="true" >
+84-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:74:13-42
+85            <intent-filter>
+85-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:75:13-78:29
+86                <action android:name="com.google.zxing.client.android.SEARCH_BOOK_CONTENTS" />
+86-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:76:17-95
+86-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:76:25-92
+87
+88                <category android:name="android.intent.category.DEFAULT" />
+88-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:55:17-76
+88-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:55:27-73
+89            </intent-filter>
+90        </activity>
+91        <activity
+91-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:80:9-88:20
+92            android:name="com.google.zxing.client.android.share.ShareActivity"
+92-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:81:13-48
+93            android:screenOrientation="user"
+93-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:82:13-45
+94            android:stateNotNeeded="true" >
+94-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:83:13-42
+95            <intent-filter>
+95-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:84:13-87:29
+96                <action android:name="com.google.zxing.client.android.SHARE" />
+96-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:85:17-80
+96-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:85:25-77
+97
+98                <category android:name="android.intent.category.DEFAULT" />
+98-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:55:17-76
+98-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:55:27-73
+99            </intent-filter>
+100        </activity>
+101        <activity
+101-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:89:9-92:45
+102            android:name="com.google.zxing.client.android.history.HistoryActivity"
+102-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:90:13-52
+103            android:label="@string/history_title"
+103-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:91:13-50
+104            android:stateNotNeeded="true" />
+104-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:92:13-42
+105        <activity
+105-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:93:9-96:45
+106            android:name="com.google.zxing.client.android.share.BookmarkPickerActivity"
+106-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:94:13-57
+107            android:label="@string/bookmark_picker_name"
+107-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:95:13-57
+108            android:stateNotNeeded="true" />
+108-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:96:13-42
+109        <activity
+109-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:97:9-100:45
+110            android:name="com.google.zxing.client.android.share.AppPickerActivity"
+110-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:98:13-52
+111            android:label="@string/app_picker_name"
+111-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:99:13-52
+112            android:stateNotNeeded="true" />
+112-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:100:13-42
+113        <activity
+113-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:101:9-105:45
+114            android:name="com.google.zxing.client.android.HelpActivity"
+114-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:102:13-41
+115            android:label="@string/menu_help"
+115-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:103:13-46
+116            android:screenOrientation="user"
+116-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:104:13-45
+117            android:stateNotNeeded="true" />
+117-->D:\Develop\Android Project\ShenBao\zxing\src\main\AndroidManifest.xml:105:13-42
+118    </application>
+119
+120</manifest>

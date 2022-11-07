@@ -27,7 +27,7 @@ public class MainApplication extends Application {
         super.onCreate();
         application = this;
         ARouter.init(this);
-        preferences = getSharedPreferences("ShenBao", MODE_PRIVATE);
+        preferences = getSharedPreferences("landfill", MODE_PRIVATE);
     }
 
     public static MainApplication getContext() {

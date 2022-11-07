@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.zxing.client.android.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/abc_vector_test"
+        android:layout_marginStart="10dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_above="@id/tv_light"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:text="对准二维码进行扫描"
+        android:textSize="14sp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:drawableTop="@drawable/ic_light"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="开灯"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+</RelativeLayout>

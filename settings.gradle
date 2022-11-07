@@ -1,2 +1,3 @@
+include ':zxing'
 include ':ucrop'
 include ':app', ':picture_library'

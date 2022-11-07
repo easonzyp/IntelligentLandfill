@@ -8,6 +8,7 @@ import android.widget.RadioGroup;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.zxing.client.android.CaptureActivity;
 import com.jeremyliao.liveeventbus.LiveEventBus;
 import com.wise.develop.Landfill.MainApplication;
 import com.wise.develop.Landfill.R;
@@ -93,7 +94,8 @@ public class MainActivity extends BaseActivity {
             } else if (checkedId == R.id.rb_operation) {
                 setIndexSelected(1);
             } else if (checkedId == R.id.rb_find) {
-                setIndexSelected(2);
+                toClass(context, CaptureActivity.class);
+//                setIndexSelected(2);
             } else if (checkedId == R.id.rb_statistics) {
                 setIndexSelected(3);
             } else if (checkedId == R.id.rb_train) {
