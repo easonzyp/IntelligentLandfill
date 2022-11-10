@@ -72,8 +72,7 @@
                 android:gravity="center"
                 android:text="吨袋扫码"
                 android:textColor="@drawable/tab_text_selector"
-                android:textSize="12sp"
-                android:visibility="invisible" />
+                android:textSize="12sp" />
 
             <RadioButton
                 android:id="@+id/rb_statistics"

@@ -17,7 +17,7 @@ import com.wise.develop.Landfill.base.BaseFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OperationFragment extends BaseFragment {
+public class WorkPlanFragment extends BaseFragment {
     private LinearLayout ll_container;
     private SmartRefreshLayout srl_refresh;
     private RecyclerView rv_joint_list;

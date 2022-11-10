@@ -22,6 +22,12 @@ android {
         ndk {
             abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
         }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "你的 Appkey ", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
     }
 
     buildTypes {
@@ -64,6 +70,8 @@ dependencies {
     implementation 'com.alibaba:arouter-api:1.5.2'
     implementation 'com.necer.ncalendar:ncalendar:5.0.2'
     implementation 'com.jeremyliao:live-event-bus-x:1.5.7'
+    implementation 'cn.jiguang.sdk:jpush:4.8.4'
+    implementation 'cn.jiguang.sdk:jcore:3.3.6'
     implementation project(path: ':picture_library')
     implementation project(path: ':zxing')
 }

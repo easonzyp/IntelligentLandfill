@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.jeremyliao.liveeventbus.LiveEventBus;
 import com.wise.develop.Landfill.R;
 import com.wise.develop.Landfill.activity.H5ServiceActivity;
@@ -70,7 +71,9 @@ public class HomeFragment extends BaseFragment {
             @Override
             public void onItemClick() {
 //                LiveEventBus.get(IntentKey.HOME_TAB_SWITCH, Integer.class).post(IntentKey.SWITCH_WORK_PLAN);
-                H5ServiceActivity.start(context,"http://www.baidu.com");
+//                H5ServiceActivity.start(context,"http://www.baidu.com");
+                ARouter.getInstance().build("/app/TonBagInfoActivity")
+                        .navigation();
             }
         });
     }

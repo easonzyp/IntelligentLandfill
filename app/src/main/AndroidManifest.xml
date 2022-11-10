@@ -48,12 +48,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="io.vov.vitamio.activity.InitActivity"
-            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
-            android:launchMode="singleTop"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".activity.H5ServiceActivity" />
         <activity android:name=".activity.TestActivity" >
             <!--<intent-filter>
@@ -61,5 +55,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>-->
         </activity>
+        <activity android:name=".activity.TonBagInfoActivity" />
+
+        <service
+            android:name=".service.UserService"
+            android:process=":pushcore"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".service.PushMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>

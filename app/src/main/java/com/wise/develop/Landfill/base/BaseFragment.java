@@ -53,12 +53,6 @@ public abstract class BaseFragment extends Fragment {
         return result;
     }
 
-    /**
-     * 绑定布局
-     *
-     * @return layout布局
-     */
-    protected abstract int setLayout();
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -120,4 +114,11 @@ public abstract class BaseFragment extends Fragment {
         intent.putExtras(bundle);
         Objects.requireNonNull(getActivity()).startActivityForResult(intent, requestCode);
     }
+
+    /**
+     * 绑定布局
+     *
+     * @return layout布局
+     */
+    protected abstract int setLayout();
 }

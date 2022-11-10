@@ -8,7 +8,6 @@ import android.widget.RadioGroup;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.google.zxing.client.android.CaptureActivity;
 import com.jeremyliao.liveeventbus.LiveEventBus;
 import com.wise.develop.Landfill.MainApplication;
 import com.wise.develop.Landfill.R;
@@ -18,11 +17,11 @@ import com.wise.develop.Landfill.constant.IntentKey;
 import com.wise.develop.Landfill.dialog.MoreFunctionPopup;
 import com.wise.develop.Landfill.dialog.TwoButtonCenterDialog;
 import com.wise.develop.Landfill.dialog.UpdateCenterDialog;
-import com.wise.develop.Landfill.fragment.HiddenTroubleFragment;
+import com.wise.develop.Landfill.fragment.DeviceManageFragment;
 import com.wise.develop.Landfill.fragment.HistoryFragment;
 import com.wise.develop.Landfill.fragment.HomeFragment;
-import com.wise.develop.Landfill.fragment.OperationFragment;
-import com.wise.develop.Landfill.fragment.TrainFragment;
+import com.wise.develop.Landfill.fragment.WorkPlanFragment;
+import com.wise.develop.Landfill.fragment.AccountFragment;
 
 /**
  * Created by zyp on 2020/5/12 0020.
@@ -69,10 +68,10 @@ public class MainActivity extends BaseActivity {
     private void initFragment() {
         fragmentArray = new BaseFragment[]{
                 new HomeFragment(),
-                new OperationFragment(),
+                new WorkPlanFragment(),
                 new HistoryFragment(),
-                new HiddenTroubleFragment(),
-                new TrainFragment()
+                new DeviceManageFragment(),
+                new AccountFragment()
         };
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -94,7 +93,7 @@ public class MainActivity extends BaseActivity {
             } else if (checkedId == R.id.rb_operation) {
                 setIndexSelected(1);
             } else if (checkedId == R.id.rb_find) {
-                toClass(context, CaptureActivity.class);
+                toClass(context, TonBagInfoActivity.class);
 //                setIndexSelected(2);
             } else if (checkedId == R.id.rb_statistics) {
                 setIndexSelected(3);

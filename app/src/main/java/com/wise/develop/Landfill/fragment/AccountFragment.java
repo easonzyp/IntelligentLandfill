@@ -3,7 +3,7 @@ package com.wise.develop.Landfill.fragment;
 import com.wise.develop.Landfill.R;
 import com.wise.develop.Landfill.base.BaseFragment;
 
-public class TrainFragment extends BaseFragment {
+public class AccountFragment extends BaseFragment {
 
     @Override
     protected void initView() {

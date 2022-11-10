@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:id="@+id/ic_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="titlebar"
+                android:textColor="@color/maintextcolor"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ic_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_bill_id_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="联单信息"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_container" />
+
+    <TextView
+        android:id="@+id/tv_bill_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="123456789000001111111"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_bill_id_label"
+        app:layout_constraintStart_toEndOf="@id/tv_bill_id_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_bill_id_label" />
+
+    <TextView
+        android:id="@+id/tv_waste_id_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="废料信息"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bill_id" />
+
+    <TextView
+        android:id="@+id/tv_waste_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123456789000001111111"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_waste_id_label"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id"
+        app:layout_constraintTop_toTopOf="@+id/tv_waste_id_label" />
+
+    <TextView
+        android:id="@+id/tv_state_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="状态"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_waste_id" />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未填埋"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_state_label"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id"
+        app:layout_constraintTop_toTopOf="@+id/tv_state_label" />
+
+    <TextView
+        android:id="@+id/tv_management_type_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="处置方式"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_state" />
+
+    <TextView
+        android:id="@+id/tv_management_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="填埋"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_management_type_label"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id"
+        app:layout_constraintTop_toTopOf="@+id/tv_management_type_label" />
+
+    <TextView
+        android:id="@+id/tv_weight_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="单一废料\n重量"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_management_type" />
+
+    <TextView
+        android:id="@+id/tv_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.5"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_weight_label"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id"
+        app:layout_constraintTop_toTopOf="@+id/tv_weight_label" />
+
+
+    <TextView
+        android:id="@+id/tv_location_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="预处置位\n置"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_weight" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="一层B区"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_location_label"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id"
+        app:layout_constraintTop_toTopOf="@+id/tv_location_label" />
+
+
+    <TextView
+        android:id="@+id/tv_back_location_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="返回位置"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+    <TextView
+        android:id="@+id/tv_back_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_back_location_label"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id"
+        app:layout_constraintTop_toTopOf="@+id/tv_back_location_label" />
+
+    <TextView
+        android:id="@+id/tv_create_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="创建时间"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_back_location" />
+
+    <TextView
+        android:id="@+id/tv_create_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2022"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_create_time_label"
+        app:layout_constraintStart_toStartOf="@id/tv_bill_id"
+        app:layout_constraintTop_toTopOf="@+id/tv_create_time_label" />
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="15dp"
+        android:gravity="center"
+        android:text="返回"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_create_time" />
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:text="确定"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_create_time" />
+</androidx.constraintlayout.widget.ConstraintLayout>
